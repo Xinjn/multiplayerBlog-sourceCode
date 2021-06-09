@@ -1,0 +1,134 @@
+@import "../../assets/base.less";
+
+#index {
+
+  .wrapper{
+  display: flex;
+  }
+  .item {
+    // >*{
+    //   border: 1px solid red;
+    // }
+    display: grid;
+    grid: auto auto / 80px auto;
+    margin: 20px 0;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    // padding: 0px 20px;
+
+    .avatar {
+      grid-column: 1 ;
+      grid-row: 1 / span 2;
+      justify-self: center;
+      // margin-left: 0;
+      text-align: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+        // padding: 5px;
+        border-radius: 50%;
+        background:#333333
+      }
+
+      figcaption {
+        font-size: 12px;
+        color: @textLighterColor;
+      }
+
+    }
+      .createDate{
+          // color: red;
+          float: right;
+          margin-right: 10px;
+      }
+    h3 {
+      grid-column: 2;
+      grid-row: 1;
+
+      &>span {
+        color: @textLighterColor;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+    p {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 0;
+      padding-right: 10px;
+      text-overflow:ellipsis;
+    }
+  }
+  .item:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.item:hover{
+  background-color: #2b2b2b;
+  transition: all 0.2s;
+}
+  .pagination {
+
+    display: grid;
+    justify-items: center;
+    margin-bottom: 30px;
+
+  }
+.box{
+    position:fixed;
+    right:20px;
+    bottom: 20px;
+    height:30px;
+    width: 50px;    
+    text-align:center;
+    padding-top:20px;    
+    background-color: #444444;
+    border-radius: 20%;
+    overflow: hidden;
+}
+.box:hover:before{
+    top:50%
+}
+   
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:10px;
+    width: 10px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+}
+aside{
+  // >*{border: 1px solid red;}
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  max-height: 250px;
+  border-radius: 10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  margin: 20px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+
+  h3{
+    color:#fc0;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+  }
+  article{
+     color: #ddd;
+    
+  }
+}
+}
+
+
+
+

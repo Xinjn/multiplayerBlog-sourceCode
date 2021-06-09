@@ -1,0 +1,101 @@
+@import "./base.less";
+
+body {
+  font: 14px/1.6 Arial,"Microsoft YaHei","黑体","宋体",sans-serif;
+  color: #333;
+  margin: 0;
+  background-color: #333;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.pagination {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+
+.el-button {
+  color: #fc0;
+  border: none;
+  background: #444444;
+  border-radius: 4px;  
+}
+
+.el-button.el-button--medium{
+  font-size: 13px;
+  padding: 0 8px;
+  font-weight: normal;
+  line-height: 28px;
+}
+.el-button:focus{
+  color: @themeColor;
+  background-color: #fc0;
+  border: 1px solid #2b2b2b;
+  border: none;
+}
+.el-button:hover {
+  color: @themeColor;
+  background-color: #fc0;
+  border: 1px solid #fc0;
+border: none;
+}
+
+input {
+  line-height: 40px;
+  border: 1px solid #eaeaea;
+  padding: 0 10px;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus {
+  border-color: @themeLighterColor;
+}
+
+.el-input.is-active .el-input__inner, .el-input__inner:focus, .el-textarea__inner:focus {
+  border-color: @themeLighterColor;
+}
+
+.el-pagination .btn-next, .el-pagination .btn-prev{
+  background:@bgColor;
+  color:black;
+}
+.el-pagination button:disabled {
+  background:@bgColor
+}
+.el-dialog, .el-pager li{
+  background:#333333;
+}
+.el-pager li{
+  color:#999;
+}
+.el-pager li:focus{
+  color:red;
+}
+.el-pager li.hover{
+  color:#999;
+}
+.el-pager li.active{
+  color:#fc0;
+}
+.el-pager li.active:hover{
+  color:#fc0;
+}
+.el-pager li:hover{
+  color:#ddd;
+}
+.el-pagination button:hover{
+  color:#ddd;
+}
+.el-input__prefix, .el-input__suffix{
+  display: none;
+}

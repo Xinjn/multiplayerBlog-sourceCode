@@ -1,0 +1,55 @@
+@import "../../assets/base.less";
+@import "../../assets/article.less";
+
+#detail {
+    background-color: #444444;
+    border-radius: 10px;
+  .user-info {
+    display: grid;
+    grid: auto auto / 80px 1fr;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+    padding-top: 20px;
+    padding-left: 10px;
+    .avatar {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      background-color: #333333;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    h3 {
+      grid-column: 2;
+      grid-row: 1;
+      color:#ddd ;
+      margin: 5px 0;
+
+    }
+
+    p {
+      grid-column: 2;
+      grid-row: 2;
+
+      margin-top: 0;
+      font-size: 12px;
+      color: @textLighterColor;
+      .username{
+          color: #fc0;
+      }
+      a {
+        color: @themeColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .article {
+    color:#ddd ;
+    padding: 30px 30px;
+    word-break:break-all;
+  }
+
+}

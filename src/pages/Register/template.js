@@ -1,26 +1,6 @@
 import { mapActions } from 'vuex'
 import { Message } from 'element-ui';
 
-// export default {
-//   data () {
-//     return {
-//       username: '',
-//       password: '',
-//       confirmPassword:''
-//     }
-//   },
-
-//   methods: {
-//     ...mapActions(['register']),
-
-//     onRegister() {
-//       this.register({username: this.username, password: this.password})
-//         .then(()=>{
-//           this.$router.push({path: '/'})
-//         })
-//     }
-//   }
-// }
 
 export default {
    
@@ -57,7 +37,7 @@ export default {
         if (value === '') {
           callback(new Error('请再次输入密码'));
         } else if (value !== this.ruleForm.pass) {
-          callback(new Error('两次输入密码不一致!'));
+          callback(new Error('两次输入的密码不一致! 请再输入一次您上面输入的密码'));
         } else {
           callback();
         }
@@ -78,7 +58,8 @@ export default {
           username: [
             { validator: checkUsername, trigger: 'blur' }
           ]
-        }
+        },
+        
       };
     },
   methods: {
@@ -91,7 +72,7 @@ export default {
                   this.$router.push({ path: '/' })
                   Message.success('注册成功')
                 }).catch(err => {
-                  Message.error('注册失败')
+                  Message.error(err.msg)
                 })
             
           } else {

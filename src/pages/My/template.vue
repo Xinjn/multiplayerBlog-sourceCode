@@ -1,9 +1,11 @@
 <template>
   <div id="user">
+
     <section class="user-info">
       <img :src="user.avatar" alt="" class="avatar">
       <h3>{{user.username}}</h3>
     </section>
+
     <section v-for="blog in blogs" :key="blog.createdAt">
       <router-link class="item" :to="`/edit/${blog.id}`">
         <div class="date">
@@ -19,16 +21,18 @@
         </div>
       </router-link>
     </section>
+    
     <span class="pagination">
-    <el-pagination 
-      layout="prev, pager, next"
-      :total="total"
-      @current-change="onPageChange"
-      :current-page="page"
-      :page-size=20
-      >
-    </el-pagination>
+      <el-pagination 
+        layout="prev, pager, next"
+        :total="total"
+        @current-change="onPageChange"
+        :current-page="page"
+        :page-size=20
+        >
+      </el-pagination>
     </span>
+    
   </div>
 </template>
 

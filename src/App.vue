@@ -57,7 +57,7 @@ export default {
     padding-left: 12%;
     padding-right: 12%;
     // padding: 68px;
-    padding-top:0;
+    // padding-top:0;
   }
 
 

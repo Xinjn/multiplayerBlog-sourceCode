@@ -1,76 +1,113 @@
 @import "../../assets/base.less";
 
 #index {
+  margin: 0;
+  padding: 0;
 
-  .wrapper{
-  display: flex;
+  .imgWrapper{
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    img{
+      width: 100%;
+    }
   }
+  //总容器
+  .wrapper{
+   display: flex;
+  }
+
+  //文章列表
   .item {
-    // >*{
-    //   border: 1px solid red;
-    // }
+    
     display: grid;
     grid: auto auto / 80px auto;
     margin: 20px 0;
     background-color: #444;
     border-radius: 10px;
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    // padding: 0px 20px;
-
+    
+    //用户信息
     .avatar {
       grid-column: 1 ;
       grid-row: 1 / span 2;
       justify-self: center;
-      // margin-left: 0;
       text-align: center;
-
+      
       img {
         width: 60px;
         height: 60px;
-        // padding: 5px;
         border-radius: 50%;
         background:#333333
       }
-
       figcaption {
         font-size: 12px;
         color: @textLighterColor;
       }
-
     }
-      .createDate{
-          // color: red;
-          float: right;
-          margin-right: 10px;
-      }
-    h3 {
+
+    //标题栏
+    .titleWrapper {
       grid-column: 2;
       grid-row: 1;
-
-      &>span {
+      .title {
+        display: inline-block;
+        max-width: 800px;
+        
+      }
+      .createDate {
+        float: right;
+        margin-right: 10px;
         color: @textLighterColor;
         font-size: 12px;
         font-weight: normal;
       }
     }
-
-    p {
+    //描述
+    .description {
       grid-column: 2;
       grid-row: 2;
       margin-top: 0;
       padding-right: 10px;
       text-overflow:ellipsis;
+      color: #8f8f8f;
     }
+
   }
   .item:after {
     content: "";
     display: table;
     clear: both;
   }
-.item:hover{
-  background-color: #2b2b2b;
-  transition: all 0.2s;
-}
+  .item:hover{
+    background-color: #2b2b2b;
+    transition: all 0.2s;
+
+    .avatar {
+
+      
+      img {
+
+         background:#444444
+      }
+      figcaption {
+
+         color:#fc0;
+      }
+    //用户信息
+     figcaption {
+         color:#fc0;
+      }
+      
+      img {
+        background:#444444
+      }
+ 
+    }
+  }
+  //分页
   .pagination {
 
     display: grid;
@@ -78,7 +115,71 @@
     margin-bottom: 30px;
 
   }
-.box{
+  //侧边栏
+  aside{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 300px;
+    
+    //热门文章
+    .Hot-articles{
+      color: #ddd;
+      background-color: #444444;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      >h3{
+        color:#fc0;
+        padding: 0;
+        margin: 0;
+        .el-icon-guide{
+        margin-right: 5px;
+      }
+    }
+
+  }
+    .Hot-articles:hover{
+      background-color: #2b2b2b;
+      transition: all .3s; 
+     
+    }
+
+    //搜索框
+     .search{
+      color: #ddd;
+      background-color: #444444;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+      >h3{
+        color:#fc0;
+        padding: 0;
+        margin: 0;
+      }
+      >.el-input{
+        padding: 10px 0;
+        border-radius: 100px;
+        
+      }
+     
+      .el-icon-search{
+        margin-right: 5px;
+      }
+    }
+    .search:hover{
+      background-color: #2b2b2b;
+      transition: all .3s; 
+    }
+
+  }
+  //回到顶部
+  .box{
+    display: none;
+  }
+  .box.showReturnTop{
+    display: block;
     position:fixed;
     right:20px;
     bottom: 20px;
@@ -89,44 +190,24 @@
     background-color: #444444;
     border-radius: 20%;
     overflow: hidden;
-}
-.box:hover:before{
-    top:50%
-}
-   
-.box-in{
-    visibility: visible;
-    display:inline-block;
-    height:10px;
-    width: 10px;
-    border: 3px solid black;
-    border-color: white transparent transparent white;
-    transform:rotate(45deg);
-}
-aside{
-  // >*{border: 1px solid red;}
-  display: flex;
-  flex-direction: column;
-  background-color: #444;
-  max-height: 250px;
-  border-radius: 10px;
-  box-shadow:0 3px 10px rgba(0,0,0,0.1);
-  margin: 20px;
-  width: 300px;
-  padding: 20px;
-  text-align: center;
+  }
+  .box:hover:before{
+      top:50%
+  }  
+  .box-in{
+      visibility: visible;
+      display:inline-block;
+      height:10px;
+      width: 10px;
+      border: 3px solid black;
+      border-color: white transparent transparent white;
+      transform:rotate(45deg);
+  }
+  .box:hover{
 
-  h3{
-    color:#fc0;
-    white-space: nowrap;
-    padding: 0;
-    margin: 0;
+      background-color: #2b2b2b;
+  
   }
-  article{
-     color: #ddd;
-    
-  }
-}
 }
 
 

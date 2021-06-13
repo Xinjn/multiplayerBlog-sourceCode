@@ -8,7 +8,8 @@ export default {
             title: '',
             rawContent: '',
             user: '',
-            createdAt:''
+            createdAt: '',
+            textarea:''
         }
     },
     created() {

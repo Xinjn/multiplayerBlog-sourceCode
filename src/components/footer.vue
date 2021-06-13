@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Copyright © Gityuan 2021 | Powered by Jekyll with Hux Theme</p>
+    <p>Copyright © GitHub 2021 | Powered by Jianan with Hux Theme</p>
   </footer>
 </template>
 

@@ -66,7 +66,7 @@ export default {
                 })
             
           } else {
-            Message.error('登录失败')
+            Message.error('用户名/密码输入错误')
           }
         });
       },

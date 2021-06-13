@@ -4,14 +4,21 @@
   <div id="login">
   <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm"  class="demo-ruleForm" >
 
-  <el-form-item  prop="username" >
+  <el-form-item prop="username" >
     <h4>用户名</h4> 
-    <el-input v-model="ruleForm.username" ></el-input>
+    <el-input 
+    v-model="ruleForm.username" 
+    placeholder="请输入用户名"
+    ></el-input>
   </el-form-item>
 
   <el-form-item  prop="pass">
     <h4>密码</h4>
-    <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+    <el-input 
+    type="password" 
+    v-model="ruleForm.pass" 
+    autocomplete="off" 
+    placeholder="请输入密码" @keyup.enter.native="submitForm('ruleForm')"></el-input>
   </el-form-item>
 
 

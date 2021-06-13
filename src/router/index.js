@@ -44,7 +44,8 @@ const router =  new Router({
     {
       path: '/register',
       component: () => import('@/pages/Register/template.vue')
-    }
+    },
+    
 
 
   ]

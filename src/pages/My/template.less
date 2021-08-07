@@ -1,9 +1,6 @@
 @import "../../assets/base.less";
-// *{
-//   border: 1px solid red;
-// }
-#my,#user {
 
+#my,#user {
   margin-top: 20px;
   background-color: #444444;
   border-radius: 10px;
@@ -14,7 +11,7 @@
     padding-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb85;
     color: #fc0;
     .avatar {
       grid-column: 1;
@@ -32,12 +29,19 @@
       margin-top: 10px;
     }
   }
-
+  .tip{
+    color: #ffcc00;
+    font-weight: 1000;
+    font-size: 1.5em;
+    text-align: center;
+    margin:10px 0;
+  }
   .item {
     display: grid;
     grid: auto  auto auto / 80px 1fr ;
     margin: 20px 0;
-
+    // border: 1px solid red;
+    
     .date {
       grid-column: 1;
       grid-row: 1 / span 3;
@@ -60,10 +64,13 @@
     }
 
     p {
+      // width: 1000px;
       grid-column: 2;
       grid-row: 2;
       margin-top: 0;
       padding-right: 20px;
+      // border: 1px solid red;
+      overflow-wrap: anywhere;
     }
 
     .actions {
